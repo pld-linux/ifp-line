@@ -1,0 +1,25 @@
+--- ./Makefile.org	2004-05-30 17:05:29.000000000 +0200
++++ ./Makefile	2005-02-28 19:50:18.524930704 +0100
+@@ -4,6 +4,7 @@
+ LDFLAGS	= `libusb-config --libs`
+ PREFIX	?= /usr/local
+ MANDIR	?= ${PREFIX}/man/man1
++BINDIR	?= $(PREFIX)/bin
+ INSTALL	?= /usr/bin/install
+ 
+ OBJS = ifp.o ifp_routines.o unicodehack.o
+@@ -13,11 +14,11 @@
+ 	$(CC) -o ifp $(OBJS) $(LDFLAGS)
+ 
+ $(MANDIR):
+-	mkdir -p $(MANDIR)
++	mkdir -p $(DESTDIR)$(MANDIR)
+ 
+ install: ifp $(MANDIR)
+-	$(INSTALL) -c ifp $(PREFIX)/bin
+-	$(INSTALL) -c -m 644 ifp.1 $(MANDIR)
++	$(INSTALL) -c ifp $(DESTDIR)$(BINDIR)
++	$(INSTALL) -c -m 644 ifp.1 $(DESTDIR)$(MANDIR)
+ 
+ ifp.o: ifp_routines.h
+ ifp_routines.o: ifp_routines.h unicodehack.h
