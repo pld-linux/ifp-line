@@ -14,6 +14,7 @@ Source0:	http://dl.sourceforge.net/ifp-driver/%{name}-%{version}.tar.gz
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://ifp-driver.sourceforge.net/
 BuildRequires:	libusb-devel
+BuildRequires:	rpmbuild(macros) >= 1.202
 Requires:	hotplug
 Buildroot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -56,12 +57,11 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_sysconfdir}/hotplug/usb,%{_mandir}/man1
 rm -rf $RPM_BUILD_ROOT
 
 %post
-#grep -q "^ifp:" /etc/group
-#if [ $? -ne 0 ]; then
-#	/usr/sbin/groupadd ifp &> /dev/null
-#	echo "ifp group added"
-#fi
-#
+%if 0
+# TODO: register group in uid_gid.db.txt
+%groupadd -g XXX ifp 
+%endif
+
 #egrep -q '^ifpdev[[:blank:]]' /etc/hotplug/usb.usermap
 #if [ $? -ne 0 ]; then
 #	cat >> /etc/hotplug/usb.usermap << EOF
