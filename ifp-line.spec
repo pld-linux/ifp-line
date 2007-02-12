@@ -2,7 +2,7 @@
 # - proper connection with hotplug
 # - integration with mc
 Summary:	iRiver command line interface
-Summary(pl):	Interfejs linii poleceñ do urz±dzeñ iRiver
+Summary(pl.UTF-8):   Interfejs linii poleceÅ„ do urzÄ…dzeÅ„ iRiver
 Name:		ifp-line
 Version:	0.2.4.5
 Release:	0.2
@@ -26,12 +26,12 @@ Buildroot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 - one can use Midnight Commander as frontend
 - ifp supported manager firmware; not supported UMS firmware
 
-%description -l pl
-Ten projekt ma byæ sterownikiem z otwartymi ¼ród³ami do odtwarzaczy
-iRiver iFP. Aktualnie dostêpne jest narzêdzie dzia³aj±ce z linii
-poleceñ, u¿ywaj±ce libusb do dostêpu do USB. Mo¿na u¿ywaæ Midnight
-Commandera jako frontendu. ifp obs³uguje firmware managera, nie
-obs³uguje natomiast UMS.
+%description -l pl.UTF-8
+Ten projekt ma byÄ‡ sterownikiem z otwartymi ÅºrÃ³dÅ‚ami do odtwarzaczy
+iRiver iFP. Aktualnie dostÄ™pne jest narzÄ™dzie dziaÅ‚ajÄ…ce z linii
+poleceÅ„, uÅ¼ywajÄ…ce libusb do dostÄ™pu do USB. MoÅ¼na uÅ¼ywaÄ‡ Midnight
+Commandera jako frontendu. ifp obsÅ‚uguje firmware managera, nie
+obsÅ‚uguje natomiast UMS.
 
 %prep
 %setup -q
