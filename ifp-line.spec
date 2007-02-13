@@ -2,7 +2,7 @@
 # - proper connection with hotplug
 # - integration with mc
 Summary:	iRiver command line interface
-Summary(pl.UTF-8):   Interfejs linii poleceń do urządzeń iRiver
+Summary(pl.UTF-8):	Interfejs linii poleceń do urządzeń iRiver
 Name:		ifp-line
 Version:	0.2.4.5
 Release:	0.2
