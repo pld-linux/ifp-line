@@ -16,7 +16,7 @@ URL:		http://ifp-driver.sourceforge.net/
 BuildRequires:	libusb-devel
 BuildRequires:	rpmbuild(macros) >= 1.202
 Requires:	hotplug
-Buildroot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 - this project aims to be an open-source driver for iRiver iFP flash
